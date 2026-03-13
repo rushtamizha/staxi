@@ -24,12 +24,12 @@ export const metadata = {
     "Trichy Airport Pickup"
   ],
   alternates: {
-    canonical: "https://www.staxi.in", // Replace with your real domain
+    canonical: "https://sonewaydroptaxi.in/", // Replace with your real domain
   },
   openGraph: {
     title: "STAXI | Premium Oneway Drop Taxi Service",
     description: "Save 50% on outstation trips. Only pay for the distance you travel.",
-    url: "https://www.staxi.in",
+    url: "https://sonewaydroptaxi.in/",
     siteName: "STAXI",
     images: [
       {
@@ -50,8 +50,8 @@ export default function RootLayout({ children }) {
     "@type": "TaxiService",
     "name": "STAXI Oneway Taxi",
     "description": "Premium Oneway Drop Taxi and Airport Pickup services in Tamil Nadu.",
-    "url": "https://www.staxi.in",
-    "telephone": "+91XXXXXXXXXX",
+    "url": "https://sonewaydroptaxi.in/",
+    "telephone": "+918760212345",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Madurai",
