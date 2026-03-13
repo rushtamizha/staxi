@@ -56,7 +56,7 @@ export default function Navbar() {
           {/* Logo with Green Accent */}
           <div className="flex items-center gap-3 group cursor-pointer">
             {/* Logo Container with Premium Glow */}
-            <div className="relative w-20 h-15  rounded-xl    group-hover:scale-105 transition-all duration-500 ">
+            <div className="relative w-20 h-20  rounded-xl    group-hover:scale-105 transition-all duration-500 ">
               <Image
                 src="/logo.jpg"
                 alt="STAXI Logo"
