@@ -411,7 +411,7 @@ const BookingForm = () => {
                       Base Fare ({minKmApplied}km)
                     </span>
                     <span className="text-sm font-black text-black tracking-tight">
-                      ₹{minKmApplied * config.extra}
+                      ₹{config.base}
                     </span>
                   </div>
                   <div className="flex justify-between items-center group">
