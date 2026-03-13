@@ -411,7 +411,7 @@ const BookingForm = () => {
                       Base Fare ({minKmApplied}km)
                     </span>
                     <span className="text-sm font-black text-black tracking-tight">
-                      ₹{config.base}
+                     ₹{formData.tripType === "ONE_WAY" ? config.base : minKmApplied * config.extra}
                     </span>
                   </div>
                   <div className="flex justify-between items-center group">
