@@ -408,7 +408,7 @@ const BookingForm = () => {
                 <div className="space-y-4 px-2">
                   <div className="flex justify-between items-center group">
                     <span className="text-[10px] font-black uppercase text-slate-400 group-hover:text-black transition-colors italic">
-                      Min. Commitment ({minKmApplied}km)
+                      Base Fare ({minKmApplied}km)
                     </span>
                     <span className="text-sm font-black text-black tracking-tight">
                       ₹{minKmApplied * config.extra}
