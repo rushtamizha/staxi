@@ -373,9 +373,7 @@ const BookingForm = () => {
                     STAXI Estimate
                   </div>
                   <h4 className="text-4xl font-black italic tracking-tighter leading-tight">
-                    BOOKING
-                    <br />
-                    DETAILS
+                    BOOKING DETAILS
                   </h4>
                 </div>
                 <X
