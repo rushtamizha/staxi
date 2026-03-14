@@ -51,6 +51,7 @@ const BookingForm = () => {
 
   const [distance, setDistance] = useState(0);
   const [days, setDays] = useState(1);
+  const [timeError, setTimeError] = useState(false);
   const [showReceipt, setShowReceipt] = useState(false);
   const originRef = useRef();
   const destRef = useRef();
@@ -135,7 +136,6 @@ const BookingForm = () => {
       alert("Please fill all details correctly.");
       return;
     }
-    if (timeError) return;
 
     const service = new window.google.maps.DistanceMatrixService();
     service.getDistanceMatrix(
