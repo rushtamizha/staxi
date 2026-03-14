@@ -52,7 +52,8 @@ const WhyChooseUs = () => {
             </motion.h2>
           </div>
           <p className="text-slate-500 font-medium max-w-sm">
-            Tamil Nadu's most reliable one-way taxi service. We eliminate return fare burdens for a truly seamless journey.
+            Welcome to S One Way Drop Taxi, your trusted partner for safe and affordable intercity travel across Tamil Nadu. We specialize in one-way taxi services that help you travel comfortably without paying for a return fare.
+Whether you are traveling for business, family trips, or airport transfers, our professional drivers and well-maintained vehicles ensure a smooth and comfortable journey every time.
           </p>
         </div>
 
