@@ -134,11 +134,14 @@ const Footer = () => {
               <li className="flex gap-4">
                 <MapPin className="text-[#22C55E] shrink-0" size={18} />
                 <span className="text-slate-400 text-sm font-medium">
-                  Al Jami Groups
-                  <br>124 Mgr Bus Stand
-                  <br> Mattuthavani Bus Stand
-                  <br>Madurai - 625007
-                </span>
+  Al Jami Groups
+  <br />
+  124 Mgr Bus Stand
+  <br />
+  Mattuthavani Bus Stand
+  <br />
+  Madurai - 625007
+</span>
               </li>
               <li className="flex gap-4">
                 <Phone className="text-[#22C55E] shrink-0" size={18} />
