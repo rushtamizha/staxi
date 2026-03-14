@@ -137,7 +137,7 @@ const Footer = () => {
                   Al Jami Groups
                   <br>124 Mgr Bus Stand
                   <br> Mattuthavani Bus Stand
-                  <br/>Madurai - 625007
+                  <br>Madurai - 625007
                 </span>
               </li>
               <li className="flex gap-4">
