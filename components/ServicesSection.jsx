@@ -49,7 +49,7 @@ const ServicesSection = () => {
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="text-[#22C55E] font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4 block"
+              className="text-[#489cc2] font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4 block"
             >
               Our Services
             </motion.span>
@@ -59,7 +59,7 @@ const ServicesSection = () => {
               className="text-4xl md:text-7xl font-black text-slate-900 leading-[0.95] uppercase tracking-tighter"
             >
               Tailored <br />
-              <span className="text-[#22C55E]">Travel Solutions</span>
+              <span className="text-[#489cc2]">Travel Solutions</span>
             </motion.h2>
           </div>
           <p className="text-slate-500 font-medium max-w-xs text-sm md:text-base">
@@ -76,15 +76,15 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
               whileHover={{ y: -5 }}
-              className="group relative bg-white p-8 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 transition-all duration-500 hover:bg-black hover:border-[#22C55E]/50 shadow-lg shadow-slate-200/50 hover:shadow-green-500/20"
+              className="group relative bg-white p-8 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 transition-all duration-500 hover:bg-black hover:border-[#489cc2]/50 "
             >
               <div className="absolute top-6 right-8">
-                <span className="text-[8px] font-black uppercase tracking-widest text-slate-400 group-hover:text-[#22C55E]">
+                <span className="text-[8px] font-black uppercase tracking-widest text-slate-400 group-hover:text-[#489cc2]">
                   {service.tag}
                 </span>
               </div>
 
-              <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-2xl flex items-center justify-center text-[#22C55E] mb-6 md:mb-8 group-hover:bg-[#22C55E] group-hover:text-white transition-all duration-500 shadow-inner">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-2xl flex items-center justify-center text-[#22C55E] mb-6 md:mb-8 group-hover:bg-[#489cc2] group-hover:text-white transition-all duration-500 shadow-inner">
                 {service.icon}
               </div>
 
@@ -97,10 +97,10 @@ const ServicesSection = () => {
               </p>
 
               <div className="flex items-center justify-between border-t border-slate-50 pt-6 group-hover:border-white/10">
-                <span className="text-[10px] font-black uppercase tracking-widest text-[#22C55E]">
+                <span className="text-[10px] font-black uppercase tracking-widest text-[#489cc2]">
                   Book Now
                 </span>
-                <div className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-[#22C55E] group-hover:bg-[#22C55E] transition-all duration-500">
+                <div className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-[#489cc2] group-hover:bg-[#489cc2] transition-all duration-500">
                   <ArrowUpRight size={14} className="text-slate-400 group-hover:text-white" />
                 </div>
               </div>
@@ -140,7 +140,7 @@ const ServicesSection = () => {
           <div className="relative z-20 w-full md:w-auto">
             <button 
               onClick={() => window.open('https://wa.me/918760212345?text=Hi STAXI, I want to plan a long trip.', '_blank')}
-              className="bg-[#22C55E] text-white px-8 md:px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 w-full md:w-auto shadow-[0_10px_40px_rgba(34,197,94,0.4)]"
+              className="bg-[#489cc2] text-white px-8 md:px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 w-full md:w-auto "
             >
               Contact Support <MoveRight size={18} />
             </button>
