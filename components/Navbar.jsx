@@ -82,7 +82,7 @@ export default function Navbar() {
                 <span
                   className={`text-[11px] uppercase tracking-widest font-black transition-colors ${
                     activeSection === link.name
-                      ? "text-[#135984]"
+                      ? "text-[#489cc2]"
                       : "text-gray-300 hover:text-white"
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function Navbar() {
                 {activeSection === link.name && (
                   <motion.div
                     layoutId="nav-mover"
-                    className="absolute -bottom-0.5 left-0 w-full h-1 bg-[#135984] rounded-full "
+                    className="absolute -bottom-0.5 left-0 w-full h-1 bg-[#489cc2] rounded-full "
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -103,7 +103,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <a
               href="tel:+918760212345"
-              className="flex items-center gap-2 px-6 py-2.5 rounded-xl font-black text-xs uppercase tracking-tighter bg-[#135984] text-white   transition-all hover:bg-white hover:text-black hover:scale-105 active:scale-95"
+              className="flex items-center gap-2 px-6 py-2.5 rounded-xl font-black text-xs uppercase tracking-tighter bg-[#489cc2] text-white   transition-all hover:bg-white hover:text-black hover:scale-105 active:scale-95"
             >
               <Phone size={14} fill="currentColor" /> Call Now
             </a>
@@ -111,7 +111,7 @@ export default function Navbar() {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden p-2 rounded-xl bg-[#135984] text-white "
+            className="md:hidden p-2 rounded-xl bg-[#489cc2] text-white "
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -138,7 +138,7 @@ export default function Navbar() {
                 }}
                 className={`text-sm font-black uppercase tracking-widest p-4 rounded-2xl transition-all ${
                   activeSection === link.name
-                    ? "bg-[#135984] text-white"
+                    ? "bg-[#489cc2] text-white"
                     : "text-gray-400 hover:bg-white/5"
                 }`}
               >
@@ -148,7 +148,7 @@ export default function Navbar() {
             <div className="h-[1px] bg-white/10 my-2" />
             <a
               href="tel:+918760212345"
-              className="w-full bg-[#135984] text-white text-center py-5 rounded-2xl font-black text-lg tracking-tighter "
+              className="w-full bg-[#489cc2] text-white text-center py-5 rounded-2xl font-black text-lg tracking-tighter "
             >
               BOOK VIA CALL
             </a>
