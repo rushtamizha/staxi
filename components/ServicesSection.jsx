@@ -84,7 +84,7 @@ const ServicesSection = () => {
                 </span>
               </div>
 
-              <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-2xl flex items-center justify-center text-[#22C55E] mb-6 md:mb-8 group-hover:bg-[#489cc2] group-hover:text-white transition-all duration-500 shadow-inner">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-green-50 rounded-2xl flex items-center justify-center text-[#489cc2] mb-6 md:mb-8 group-hover:bg-[#489cc2] group-hover:text-white transition-all duration-500 shadow-inner">
                 {service.icon}
               </div>
 
