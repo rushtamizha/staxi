@@ -47,7 +47,7 @@ const Testimonials = () => {
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-[#22C55E] font-black uppercase tracking-[0.3em] text-xs mb-4 block"
+              className="text-[#489cc2] font-black uppercase tracking-[0.3em] text-xs mb-4 block"
             >
               Voice of Our Clients
             </motion.span>
@@ -57,7 +57,7 @@ const Testimonials = () => {
               className="text-5xl md:text-7xl font-black text-slate-900 leading-none uppercase tracking-tighter"
             >
               Real Stories <br />
-              <span className="text-[#22C55E]">Real Comfort</span>
+              <span className="text-[#489cc2]">Real Comfort</span>
             </motion.h2>
           </div>
         </div>
@@ -85,9 +85,9 @@ const Testimonials = () => {
           >
             {REVIEWS.map((review, idx) => (
               <SwiperSlide key={idx}>
-                <div className="bg-black p-8 rounded-[2.5rem] h-full flex flex-col justify-between border border-white/5 relative group transition-all duration-500 hover:border-[#22C55E]/30">
+                <div className="bg-black p-8 rounded-[2.5rem] h-full flex flex-col justify-between border border-white/5 relative group transition-all duration-500 hover:border-[#489cc2]/30">
                   {/* Decorative Quote Icon */}
-                  <div className="absolute top-8 right-8 text-[#22C55E]/10 group-hover:text-[#22C55E]/20 transition-colors">
+                  <div className="absolute top-8 right-8 text-[#489cc2]/10 group-hover:text-[#22C55E]/20 transition-colors">
                     <Quote size={60} fill="currentColor" />
                   </div>
 
@@ -95,7 +95,7 @@ const Testimonials = () => {
                     {/* Stars */}
                     <div className="flex gap-1 mb-6">
                       {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} size={14} className="text-[#22C55E]" fill="#22C55E" />
+                        <Star key={i} size={14} className="text-[#489cc2]" fill="#22C55E" />
                       ))}
                     </div>
 
@@ -105,12 +105,12 @@ const Testimonials = () => {
                   </div>
 
                   <div className="flex items-center gap-4 border-t border-white/10 pt-6">
-                    <div className="bg-[#22C55E] p-2 rounded-xl text-white">
+                    <div className="bg-[#489cc2] p-2 rounded-xl text-white">
                       <UserCircle size={24} />
                     </div>
                     <div>
                       <h4 className="text-white font-black uppercase tracking-tighter italic">{review.name}</h4>
-                      <p className="text-[#22C55E] text-[10px] font-black uppercase tracking-widest">{review.role}</p>
+                      <p className="text-[#489cc2] text-[10px] font-black uppercase tracking-widest">{review.role}</p>
                     </div>
                   </div>
                 </div>
@@ -122,11 +122,11 @@ const Testimonials = () => {
 
       <style jsx global>{`
         .testimonial-swiper .swiper-pagination-bullet {
-          background: #e2e8f0;
+          background: #489cc2;
           opacity: 1;
         }
         .testimonial-swiper .swiper-pagination-bullet-active {
-          background: #22C55E !important;
+          background: #489cc2 !important;
           width: 24px;
           border-radius: 4px;
           transition: all 0.3s ease;
