@@ -54,7 +54,7 @@ const Footer = () => {
         {/* Trust Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-16 border-b border-white/5 mb-16">
           <div className="flex items-center gap-4 group">
-            <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-[#22C55E] group-hover:bg-[#22C55E] group-hover:text-white transition-all">
+            <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-[#489cc2] group-hover:bg-[#489cc2] group-hover:text-white transition-all">
               <ShieldCheck size={24} />
             </div>
             <div>
@@ -68,7 +68,7 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4 group">
-            <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-[#22C55E] group-hover:bg-[#22C55E] group-hover:text-white transition-all">
+            <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-[#489cc2] group-hover:bg-[#489cc2] group-hover:text-white transition-all">
               <Clock size={24} />
             </div>
             <div>
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4 group">
-            <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-[#22C55E] group-hover:bg-[#22C55E] group-hover:text-white transition-all">
+            <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-[#489cc2] group-hover:bg-[#489cc2] group-hover:text-white transition-all">
               <Headphones size={24} />
             </div>
             <div>
@@ -125,7 +125,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={item.label}
-                    className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 hover:bg-[#22C55E] hover:text-white transition-all"
+                    className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 hover:bg-[#489cc2] hover:text-white transition-all"
                   >
                     <Icon size={18} />
                   </a>
@@ -145,7 +145,7 @@ const Footer = () => {
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className="text-slate-500 text-sm font-bold hover:text-[#22C55E] transition-colors flex items-center gap-2 group"
+                    className="text-slate-500 text-sm font-bold hover:text-[#489cc2] transition-colors flex items-center gap-2 group"
                   >
                     <ArrowRight
                       size={12}
@@ -166,7 +166,7 @@ const Footer = () => {
 
             <ul className="space-y-6">
               <li className="flex gap-4">
-                <MapPin className="text-[#22C55E] shrink-0" size={18} />
+                <MapPin className="text-[#489cc2] shrink-0" size={18} />
 
                 <span className="text-slate-400 text-sm font-medium">
                   Al Jami Groups
@@ -180,7 +180,7 @@ const Footer = () => {
               </li>
 
               <li className="flex gap-4">
-                <Phone className="text-[#22C55E]" size={18} />
+                <Phone className="text-[#489cc2]" size={18} />
 
                 <a
                   href="tel:+918760212345"
@@ -191,7 +191,7 @@ const Footer = () => {
               </li>
 
               <li className="flex gap-4">
-                <Mail className="text-[#22C55E]" size={18} />
+                <Mail className="text-[#489cc2]" size={18} />
 
                 <a
                   href="mailto:staxi.madurai@gmail.com"
@@ -203,7 +203,7 @@ const Footer = () => {
 
               {/* WhatsApp */}
               <li className="flex gap-4">
-                <MessageCircle className="text-[#25D366]" size={18} />
+                <MessageCircle className="text-[#489cc2]" size={18} />
 
                 <a
                   href="https://wa.me/918760212345"
@@ -232,7 +232,7 @@ const Footer = () => {
               App Store Soon
             </button>
 
-            <button className="w-full mt-3 bg-[#22C55E] text-white p-4 rounded-2xl font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all">
+            <button className="w-full mt-3 bg-[#489cc2] text-white p-4 rounded-2xl font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all">
               Play Store Soon
             </button>
           </div>
@@ -249,10 +249,10 @@ const Footer = () => {
               href="https://wepzite.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-yellow-500 text-[9px] font-black uppercase tracking-[0.2em] flex items-center gap-2 hover:text-[#22C55E] transition-colors group"
+              className="text-yellow-500 text-[9px] font-black uppercase tracking-[0.2em] flex items-center gap-2 hover:text-[#489cc2] transition-colors group"
             >
               Developed by
-              <span className="text-yellow-300 group-hover:text-[#22C55E]">
+              <span className="text-yellow-300 group-hover:text-[#489cc2]">
                 wepzite.in
               </span>
               <ExternalLink size={10} className="opacity-50" />
