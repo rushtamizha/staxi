@@ -87,9 +87,7 @@ const Footer = () => {
                           />
                         </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Tamil Nadu's premier one-way taxi specialists. Dedicated to
-              providing transparent, safe, and comfortable intercity travel
-              solutions.
+              Tamil Nadu’s trusted one-way drop taxi specialists providing transparent pricing, safe rides, and comfortable intercity travel
             </p>
             <div className="flex gap-4">
               {[Facebook, Instagram, Twitter].map((Icon, i) => (
