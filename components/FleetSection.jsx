@@ -12,7 +12,7 @@ const FLEET = [
     bata: "400",
     seats: "4",
     image: "/seeden.png", // Replace with your image path
-    color: "from-emerald-500/10 to-transparent"
+    color: "from-blue-500/10 to-transparent"
   },
   {
     name: "SUV",
@@ -21,7 +21,7 @@ const FLEET = [
     bata: "400",
     seats: "6",
     image: "/suv.png", // Replace with your image path
-    color: "from-green-500/20 to-transparent"
+    color: "from-blue-500/20 to-transparent"
   },
   {
     name: "MUV",
@@ -30,7 +30,7 @@ const FLEET = [
     bata: "400",
     seats: "7",
     image: "/muv.png", // Replace with your image path
-    color: "from-emerald-600/30 to-transparent"
+    color: "from-blue-600/30 to-transparent"
   }
 ];
 
@@ -43,7 +43,7 @@ const FleetSection = () => {
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-[#22C55E] font-black uppercase tracking-[0.3em] text-xs"
+            className="text-[#489cc2] font-black uppercase tracking-[0.3em] text-xs"
           >
             Get the Best Offers
           </motion.span>
@@ -52,7 +52,7 @@ const FleetSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-black text-slate-900 uppercase tracking-tighter mt-2"
           >
-            Our <span className="text-[#22C55E]">Tariffs</span>
+            Our <span className="text-[#489cc2]">Tariffs</span>
           </motion.h2>
         </div>
 
@@ -69,7 +69,7 @@ const FleetSection = () => {
               {/* Price Tag Overlay */}
               <div className="absolute top-6 right-6 z-2">
                 <div className="bg-black text-white px-4 py-2 rounded-2xl flex flex-col items-center shadow-lg">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-[#22C55E]">Starting</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-[#489cc2]">Starting</span>
                   <span className="text-xl font-black italic">₹{car.price}<span className="text-xs">/km</span></span>
                 </div>
               </div>
@@ -97,7 +97,7 @@ const FleetSection = () => {
 
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="bg-slate-50 p-3 rounded-2xl flex items-center gap-3">
-                    <div className="bg-white p-2 rounded-lg text-[#22C55E] shadow-sm">
+                    <div className="bg-white p-2 rounded-lg text-[#489cc2] shadow-sm">
                       <Users size={16} />
                     </div>
                     <div>
@@ -106,7 +106,7 @@ const FleetSection = () => {
                     </div>
                   </div>
                   <div className="bg-slate-50 p-3 rounded-2xl flex items-center gap-3">
-                    <div className="bg-white p-2 rounded-lg text-[#22C55E] shadow-sm">
+                    <div className="bg-white p-2 rounded-lg text-[#489cc2] shadow-sm">
                       <Gauge size={16} />
                     </div>
                     <div>
@@ -120,13 +120,13 @@ const FleetSection = () => {
                 <div className="grid grid-cols-2 gap-3">
                   <a 
                     href="tel:+918760212345"
-                    className="flex items-center justify-center gap-2 bg-slate-900 text-white py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-[#22C55E] transition-all active:scale-95 shadow-lg"
+                    className="flex items-center justify-center gap-2 bg-slate-900 text-white py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-[#489cc2] transition-all active:scale-95 shadow-lg"
                   >
                     <Phone size={14} fill="currentColor" /> Phone
                   </a>
                   <a 
                     href="https://wa.me/918760212345"
-                    className="flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-black transition-all active:scale-95 shadow-lg"
+                    className="flex items-center justify-center gap-2 bg-[#489cc2] text-white py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-black transition-all active:scale-95 shadow-lg"
                   >
                     <MessageCircle size={14} fill="currentColor" /> Whatsapp
                   </a>
