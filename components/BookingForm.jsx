@@ -163,7 +163,7 @@ const BookingForm = () => {
 
   if (!isLoaded)
     return (
-      <div className="p-10 text-center font-black text-[#22C55E] tracking-tighter">
+      <div className="p-10 text-center font-black text-[#135984] tracking-tighter">
         BOOTING STAXI ENGINE...
       </div>
     );
@@ -173,7 +173,7 @@ const BookingForm = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-[2.5rem] p-1 shadow-2xl border-b-[12px] border-[#22C55E] overflow-hidden"
+        className="bg-white rounded-[2.5rem] p-1 shadow-2xl border-b-[12px] border-[#135984] overflow-hidden"
       >
         <div className="p-6 md:p-8">
           {/* Trip Selector */}
@@ -182,7 +182,7 @@ const BookingForm = () => {
               <button
                 key={t}
                 onClick={() => setFormData({ ...formData, tripType: t })}
-                className={`flex-1 py-3.5 rounded-xl text-[10px] font-black tracking-widest transition-all ${formData.tripType === t ? "bg-black text-[#22C55E] shadow-lg" : "text-slate-400"}`}
+                className={`flex-1 py-3.5 rounded-xl text-[10px] font-black tracking-widest transition-all ${formData.tripType === t ? "bg-black text-[#135984] shadow-lg" : "text-slate-400"}`}
               >
                 {t.replace("_", " ")}
               </button>
@@ -194,7 +194,7 @@ const BookingForm = () => {
             <div className="grid grid-cols-2 gap-3">
               <div className="relative group">
                 <User
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-[#22C55E] transition-colors"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-[#135984] transition-colors"
                   size={16}
                 />
                 <input
@@ -208,7 +208,7 @@ const BookingForm = () => {
               </div>
               <div className="relative group">
                 <Phone
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-[#22C55E] transition-colors"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-[#135984] transition-colors"
                   size={16}
                 />
                 <input
@@ -226,7 +226,7 @@ const BookingForm = () => {
             <Autocomplete>
               <div className="relative">
                 <MapPin
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#22C55E]"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#135984]"
                   size={16}
                 />
                 <input
@@ -325,7 +325,7 @@ const BookingForm = () => {
                 <button
                   key={c}
                   onClick={() => setFormData({ ...formData, carType: c })}
-                  className={`py-4 rounded-2xl border-2 flex flex-col items-center transition-all ${formData.carType === c ? "border-[#22C55E] bg-green-50 shadow-sm" : "border-slate-100"}`}
+                  className={`py-4 rounded-2xl border-2 flex flex-col items-center transition-all ${formData.carType === c ? "border-[#135984] bg-[#135984] " : "border-slate-100"}`}
                 >
                   <span
                     className={`text-[11px] font-black ${formData.carType === c ? "text-black" : "text-slate-400"}`}
@@ -342,7 +342,7 @@ const BookingForm = () => {
             <button
               disabled={timeError}
               onClick={handleCalculate}
-              className={`w-full py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all flex items-center justify-center gap-2 ${timeError ? "bg-slate-200 text-slate-400 cursor-not-allowed" : "bg-black text-[#22C55E] hover:bg-[#22C55E] hover:text-white shadow-xl hover:shadow-green-500/20 active:scale-95"}`}
+              className={`w-full py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all flex items-center justify-center gap-2 ${timeError ? "bg-slate-200 text-slate-400 cursor-not-allowed" : "bg-black text-[#135984] hover:bg-[#135984] hover:text-white  active:scale-95"}`}
             >
               {timeError ? "Invalid Time" : "Calculate Fare"}{" "}
               <ChevronRight size={16} />
@@ -365,9 +365,9 @@ const BookingForm = () => {
             <motion.div
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
-              className="relative bg-white w-full max-w-md rounded-[3rem] overflow-hidden shadow-2xl border-4 border-[#22C55E]"
+              className="relative bg-white w-full max-w-md rounded-[3rem] overflow-hidden shadow-2xl border-4 border-[#135984]"
             >
-              <div className="bg-[#22C55E] p-8 text-black flex justify-between items-start">
+              <div className="bg-[#135984] p-8 text-black flex justify-between items-start">
                 <div>
                   <div className="bg-black text-white px-2 py-1 rounded text-[8px] font-black uppercase mb-2 inline-block">
                     STAXI Estimate
@@ -396,7 +396,7 @@ const BookingForm = () => {
                     <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">
                       Total Distance
                     </span>
-                    <span className="text-sm font-black text-[#22C55E]">
+                    <span className="text-sm font-black text-[#135984]">
                       {formData.tripType === "ROUND_TRIP"
                         ? distance * 2
                         : distance}{" "}
@@ -434,14 +434,14 @@ const BookingForm = () => {
                     <span className="text-2xl font-black uppercase italic tracking-tighter text-black">
                       Total Fare
                     </span>
-                    <span className="text-4xl font-black text-[#22C55E] tracking-tighter">
+                    <span className="text-4xl font-black text-[#135984] tracking-tighter">
                       ₹{totalAmount}
                     </span>
                   </div>
                 </div>
 
                 <div className="flex gap-2 bg-green-50 p-4 rounded-2xl border border-green-100">
-                  <Info size={16} className="shrink-0 text-[#22C55E]" />
+                  <Info size={16} className="shrink-0 text-[#135984]" />
                   <p className="text-[8px] font-bold text-green-900 leading-relaxed uppercase tracking-wider">
                     Toll, Parking & State Permits are extra. Estimation based on
                     standard routes.
@@ -450,7 +450,7 @@ const BookingForm = () => {
 
                 <button
                   onClick={sendWhatsApp}
-                  className="w-full bg-[#25D366] text-white py-5 rounded-[1.5rem] font-black text-lg flex items-center justify-center gap-3 shadow-xl hover:shadow-green-500/30 transition-all active:scale-95"
+                  className="w-full bg-[#135984] text-white py-5 rounded-[1.5rem] font-black text-lg flex items-center justify-center gap-3 shadow-xl hover:shadow-green-500/30 transition-all active:scale-95"
                 >
                   <MessageCircle fill="white" size={24} /> BOOK ON WHATSAPP
                 </button>
