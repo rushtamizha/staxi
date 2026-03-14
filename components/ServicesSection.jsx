@@ -63,8 +63,7 @@ const ServicesSection = () => {
             </motion.h2>
           </div>
           <p className="text-slate-500 font-medium max-w-xs text-sm md:text-base">
-            Explore our convenient taxi services designed for reliability and
-            transparency across Tamil Nadu.
+            We provide clean vehicles, experienced drivers, and transparent pricing with no hidden charges. Customer satisfaction and safety are our top priorities.
           </p>
         </div>
 
