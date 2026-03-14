@@ -52,7 +52,6 @@ const BookingForm = () => {
   const [distance, setDistance] = useState(0);
   const [days, setDays] = useState(1);
   const [showReceipt, setShowReceipt] = useState(false);
-  const [timeError, setTimeError] = useState(false);
   const originRef = useRef();
   const destRef = useRef();
 
