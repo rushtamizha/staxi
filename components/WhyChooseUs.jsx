@@ -7,22 +7,22 @@ const FEATURES = [
   {
     title: "No Hidden Charges",
     desc: "What you see is what you pay. No extra tolls or surcharges hidden in fine print.",
-    icon: <ShieldCheck className="text-[#22C55E]" size={32} />,
+    icon: <ShieldCheck className="text-[#489cc2]" size={32} />,
   },
   {
     title: "All Tamil Nadu Coverage",
     desc: "From Chennai to Kanyakumari, we cover every corner of the state with ease.",
-    icon: <Map className="text-[#22C55E]" size={32} />,
+    icon: <Map className="text-[#489cc2]" size={32} />,
   },
   {
     title: "Smart Booking Website",
     desc: "Dedicated apps for customers and drivers for real-time tracking and updates.",
-    icon: <Smartphone className="text-[#22C55E]" size={32} />,
+    icon: <Smartphone className="text-[#489cc2]" size={32} />,
   },
   {
     title: "Budget-Friendly Fares",
     desc: "Save up to 40% on intercity travel with our dedicated one-way pricing model.",
-    icon: <BadgePercent className="text-[#22C55E]" size={32} />,
+    icon: <BadgePercent className="text-[#489cc2]" size={32} />,
   },
 ];
 
@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
             <motion.span 
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-[#22C55E] font-black uppercase tracking-[0.2em] text-xs mb-4 block"
+              className="text-[#489cc2] font-black uppercase tracking-[0.2em] text-xs mb-4 block"
             >
               The Gold Standard of Travel
             </motion.span>
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
               className="text-4xl md:text-6xl font-black text-slate-900 leading-none uppercase tracking-tighter"
             >
               Why Choose <br />
-              <span className="text-[#22C55E]">STAXI Oneway Taxi</span>
+              <span className="text-[#489cc2]">STAXI Oneway Taxi</span>
             </motion.h2>
           </div>
           <p className="text-slate-500 font-medium max-w-sm">
