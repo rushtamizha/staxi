@@ -285,20 +285,7 @@ const BookingForm = () => {
             </div>
 
             {/* Error Notification */}
-            <AnimatePresence>
-              {timeError && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  className="flex items-center gap-2 bg-red-50 p-3 rounded-xl border border-red-100 text-red-600"
-                >
-                  <AlertTriangle size={14} />
-                  <p className="text-[9px] font-black uppercase tracking-tight">
-                    Requires 1 hour gap for driver assignment.
-                  </p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            
 
             {/* Round Trip End Date */}
             {formData.tripType === "ROUND_TRIP" && (
@@ -341,7 +328,7 @@ const BookingForm = () => {
 
             <button
   onClick={handleCalculate}
-  className="w-full py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all flex items-center justify-center gap-2 bg-black text-[#135984] hover:bg-[#489cc2] hover:text-white active:scale-95"
+  className="w-full py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all flex items-center justify-center gap-2 bg-[#135984] text-[#135984] hover:bg-[#489cc2] hover:text-white active:scale-95"
 >
   Calculate Fare <ChevronRight size={16} />
 </button>
