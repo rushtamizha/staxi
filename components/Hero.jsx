@@ -41,12 +41,12 @@ const HeroSection = () => {
               🚕 Intercity Specialists
             </span>
             <h1 className="text-5xl md:text-7xl font-black leading-[0.95] mb-6 tracking-tighter uppercase">
-              Premium <br />
+              Tamil Nadu’s Trusted <br />
               <span className="text-[#22C55E]">One Way</span> <br />
-              Taxi Service
+              Drop Taxi Service
             </h1>
             <p className="text-slate-200 text-lg md:text-xl max-w-lg leading-relaxed mb-8 font-medium">
-              Elite fleet at budget prices. Door-to-door pickup across South India with 100% transparent billing.
+              Reliable, safe, and affordable intercity taxi rides across Tamil Nadu with transparent pricing and comfortable travel.
             </p>
 
             <div className="grid grid-cols-2 gap-4 max-w-sm">
