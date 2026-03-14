@@ -332,7 +332,7 @@ const BookingForm = () => {
                   >
                     {c}
                   </span>
-                  <span className="text-[8px] font-bold text-slate-400 mt-1">
+                  <span className="text-[8px] font-bold text-white mt-1">
                     ₹{PRICING_DATA[formData.tripType][c].extra}/KM
                   </span>
                 </button>
