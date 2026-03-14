@@ -461,8 +461,8 @@ const BookingForm = () => {
       <style jsx>{`
         .input-premium {
           width: 100%;
-          background: #489cc2;
-          border: 2px solid #489cc2;
+          background: #f8fafc;
+          border: 2px solid #f1f5f9;
           padding: 1rem 2.5rem;
           border-radius: 1.25rem;
           font-weight: 800;
@@ -478,8 +478,8 @@ const BookingForm = () => {
         }
         .input-date-premium {
           width: 100%;
-          background: #489cc2;
-          border: 2px solid #489cc2;
+          background: #f8fafc;
+          border: 2px solid #f1f5f9;
           padding: 1.4rem 0.8rem 0.6rem 0.8rem;
           border-radius: 1.25rem;
           font-weight: 800;
