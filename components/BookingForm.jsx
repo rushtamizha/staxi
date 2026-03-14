@@ -61,7 +61,7 @@ const BookingForm = () => {
     const now = new Date();
 
     // Create a time string for 1 hour from now (e.g., "10:30")
-    const oneHourLater = new Date(now.getTime() + 60 * 60 * 1000);
+    const oneHourLater = new Date(now.getTime() + 60 * 60 * 1000 + 1);
     const hours = String(oneHourLater.getHours()).padStart(2, "0");
     const minutes = String(oneHourLater.getMinutes()).padStart(2, "0");
     const defaultTime = `${hours}:${minutes}`;
