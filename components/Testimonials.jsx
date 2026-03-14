@@ -87,7 +87,7 @@ const Testimonials = () => {
               <SwiperSlide key={idx}>
                 <div className="bg-black p-8 rounded-[2.5rem] h-full flex flex-col justify-between border border-white/5 relative group transition-all duration-500 hover:border-[#489cc2]/30">
                   {/* Decorative Quote Icon */}
-                  <div className="absolute top-8 right-8 text-[#489cc2]/10 group-hover:text-[#22C55E]/20 transition-colors">
+                  <div className="absolute top-8 right-8 text-[#489cc2]/10 group-hover:text-[#489cc2]/20 transition-colors">
                     <Quote size={60} fill="currentColor" />
                   </div>
 
@@ -95,7 +95,7 @@ const Testimonials = () => {
                     {/* Stars */}
                     <div className="flex gap-1 mb-6">
                       {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} size={14} className="text-[#489cc2]" fill="#22C55E" />
+                        <Star key={i} size={14} className="text-[#489cc2]" fill="#489cc2" />
                       ))}
                     </div>
 
