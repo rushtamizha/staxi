@@ -327,7 +327,7 @@ const BookingForm = () => {
 
             <button
   onClick={handleCalculate}
-  className="w-full py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all flex items-center justify-center gap-2 bg-[#135984] text-[#135984] hover:bg-[#489cc2] hover:text-white active:scale-95"
+  className="w-full py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all flex items-center justify-center gap-2 bg-[#135984] text-white hover:bg-[#489cc2] hover:text-white active:scale-95"
 >
   Calculate Fare <ChevronRight size={16} />
 </button>
