@@ -37,12 +37,12 @@ const HeroSection = () => {
             className="text-white"
           >
             {/* Green Badge */}
-            <span className="inline-block px-4 py-1.5 rounded-lg bg-[#22C55E] text-white text-xs font-black uppercase tracking-tighter mb-6 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+            <span className="inline-block px-4 py-1.5 rounded-lg bg-[#489cc2] text-white text-xs font-black uppercase tracking-tighter mb-6 ">
               🚕 Intercity Specialists
             </span>
             <h1 className="text-5xl md:text-7xl font-black leading-[0.95] mb-6 tracking-tighter uppercase">
               Tamil Nadu’s Trusted <br />
-              <span className="text-[#22C55E]">One Way</span> <br />
+              <span className="text-[#489cc2]">One Way</span> <br />
               Drop Taxi Service
             </h1>
             <p className="text-slate-200 text-lg md:text-xl max-w-lg leading-relaxed mb-8 font-medium">
@@ -52,8 +52,8 @@ const HeroSection = () => {
             <div className="grid grid-cols-2 gap-4 max-w-sm">
               {["24/7 Service", "Zero Cancellation", "Verified Drivers", "Clean AC Cabs"].map(
                 (tag) => (
-                  <span key={tag} className="flex items-center gap-2 text-[11px] font-black uppercase tracking-widest text-[#22C55E]/90">
-                    <CheckCircle2 size={14} className="text-[#22C55E]" />
+                  <span key={tag} className="flex items-center gap-2 text-[11px] font-black uppercase tracking-widest text-[#489cc2]/90">
+                    <CheckCircle2 size={14} className="text-[#489cc2]" />
                     {tag}
                   </span>
                 )
