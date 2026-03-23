@@ -22,9 +22,9 @@ const LIBRARIES = ["places"];
 
 const PRICING_DATA = {
   ONE_WAY: {
-    SEDAN: { base: 1700, minKm: 100, extra: 13, bata: 400, name: "Sedan" },
-    MUV: { base: 2470, minKm: 100, extra: 19, bata: 400, name: "MUV" },
-    SUV: { base: 2600, minKm: 100, extra: 20, bata: 400, name: "SUV" },
+    SEDAN: { base: 1500, minKm: 100, extra: 13, bata: 400, name: "Sedan" },
+    MUV: { base: 2100, minKm: 100, extra: 19, bata: 400, name: "MUV" },
+    SUV: { base: 2200, minKm: 100, extra: 20, bata: 400, name: "SUV" },
   },
   ROUND_TRIP: {
     SEDAN: { minKmPerDay: 250, extra: 12, bata: 400, name: "Sedan" },
