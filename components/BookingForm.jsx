@@ -399,39 +399,51 @@ const BookingForm = () => {
                 </div>
 
                 <div className="space-y-4 px-2">
-                  <div className="flex justify-between items-center group">
-                    <span className="text-[10px] font-black uppercase text-slate-400 group-hover:text-black transition-colors italic">
-                      Base Fare ({minKmApplied}km)
-                    </span>
-                    <span className="text-sm font-black text-black tracking-tight">
-                     ₹{formData.tripType === "ONE_WAY" ? config.base : minKmApplied * config.extra}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center group">
-                    <span className="text-[10px] font-black uppercase text-slate-400 group-hover:text-black transition-colors italic">
-                      Extra Usage ({extraKm}km)
-                    </span>
-                    <span className="text-sm font-black text-black tracking-tight">
-                      ₹{extraFare}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center group border-b border-slate-100 pb-4">
-                    <span className="text-[10px] font-black uppercase text-slate-400 group-hover:text-black transition-colors italic">
-                      Driver Bata ({days} Days)
-                    </span>
-                    <span className="text-sm font-black text-black tracking-tight">
-                      ₹{totalBata}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center pt-2">
-                    <span className="text-2xl font-black uppercase italic tracking-tighter text-black">
-                      Total Fare
-                    </span>
-                    <span className="text-4xl font-black text-[#489cc2] tracking-tighter">
-                      ₹{totalAmount}
-                    </span>
-                  </div>
-                </div>
+  {/* Dynamic Row for One Way vs Round Trip */}
+  <div className="flex justify-between items-center group">
+    <span className="text-[10px] font-black uppercase text-slate-400 group-hover:text-black transition-colors italic">
+      {formData.tripType === "ONE_WAY" && distance > 100 
+        ? `Distance Fare (${distance}km × ₹${config.extra})` 
+        : `Base Fare (${minKmApplied}km)`}
+    </span>
+    <span className="text-sm font-black text-black tracking-tight">
+      ₹{formData.tripType === "ONE_WAY" 
+          ? (distance <= 100 ? config.base : distance * config.extra)
+          : (minKmApplied * config.extra)
+      }
+    </span>
+  </div>
+
+  {/* Extra Usage Row: Only show if it's a Round Trip with extra KM or One Way doesn't use it */}
+  {extraKm > 0 && formData.tripType === "ROUND_TRIP" && (
+    <div className="flex justify-between items-center group">
+      <span className="text-[10px] font-black uppercase text-slate-400 group-hover:text-black transition-colors italic">
+        Extra Usage ({extraKm}km)
+      </span>
+      <span className="text-sm font-black text-black tracking-tight">
+        ₹{extraFare}
+      </span>
+    </div>
+  )}
+
+  <div className="flex justify-between items-center group border-b border-slate-100 pb-4">
+    <span className="text-[10px] font-black uppercase text-slate-400 group-hover:text-black transition-colors italic">
+      Driver Bata ({days} Day{days > 1 ? 's' : ''})
+    </span>
+    <span className="text-sm font-black text-black tracking-tight">
+      ₹{totalBata}
+    </span>
+  </div>
+
+  <div className="flex justify-between items-center pt-2">
+    <span className="text-2xl font-black uppercase italic tracking-tighter text-black">
+      Total Fare
+    </span>
+    <span className="text-4xl font-black text-[#489cc2] tracking-tighter">
+      ₹{totalAmount}
+    </span>
+  </div>
+</div>
 
                 <div className="flex gap-2 bg-green-50 p-4 rounded-2xl border ">
                   <Info size={16} className="shrink-0 text-[#489cc2]" />
