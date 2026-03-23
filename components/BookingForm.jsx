@@ -113,9 +113,18 @@ const BookingForm = () => {
 
   if (formData.tripType === "ONE_WAY") {
     minKmApplied = config.minKm;
-    extraKm = Math.max(0, distance - minKmApplied);
-    extraFare = extraKm * config.extra;
-    totalAmount = config.base + extraFare + totalBata;
+    
+    if (distance <= minKmApplied) {
+      // Logic: Under or equal to 100km -> Base Fare + Bata
+      totalAmount = config.base + totalBata;
+      extraKm = 0;
+      extraFare = 0;
+    } else {
+      // Logic: Over 100km -> Total Distance * Per Km Price + Bata
+      totalAmount = (distance * config.extra) + totalBata;
+      extraKm = distance;
+      extraFare = distance * config.extra;
+    }
   } else {
     const totalTravelDist = distance * 2;
     minKmApplied = days * config.minKmPerDay;
