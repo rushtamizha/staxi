@@ -7,6 +7,7 @@ import { ServiceLocations } from "@/components/ServiceLocations";
 import ServicesSection from "@/components/ServicesSection";
 import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <AboutSection/>
       <Testimonials/>
       <ServiceLocations/>
+      <WhatsAppButton/>
       <Footer/>
     </main>
   );
