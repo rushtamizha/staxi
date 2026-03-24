@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
 const WhatsAppButton = () => {
-  const phoneNumber = "918281674180";
-  const message = "Hi Aventura! I'm looking for a premium Kerala tour package. Can you help me?";
+  const phoneNumber = "918760212345";
+  const message = "Hi Can you help me?";
 
   const handleClick = () => {
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
