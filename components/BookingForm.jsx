@@ -456,6 +456,13 @@ const BookingForm = () => {
                 >
                   <MessageCircle fill="white" size={24} /> BOOK ON WHATSAPP
                 </button>
+
+                <button
+                  className="w-full bg-[#48c256] text-white py-5 rounded-[1.5rem] font-black text-lg flex items-center justify-center gap-3  transition-all active:scale-95"
+                >
+                  <Phone fill="white" size={24} /> <a href="tel:+918760212345">BOOK ON WHATSAPP</a>
+                </button>
+                
               </div>
             </motion.div>
           </div>
