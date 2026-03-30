@@ -365,9 +365,6 @@ const BookingForm = () => {
                   <div className="bg-black text-white px-2 py-1 rounded text-[8px] font-black uppercase mb-2 inline-block">
                     STAXI Estimate
                   </div>
-                  <h4 className="text-4xl font-black italic tracking-tighter leading-tight">
-                    BOOKING DETAILS
-                  </h4>
                 </div>
                 <X
                   className="cursor-pointer hover:rotate-90 transition-transform"
@@ -445,9 +442,9 @@ const BookingForm = () => {
   </div>
 </div>
 
-                <div className="flex gap-2 bg-green-50 p-4 rounded-2xl border ">
-                  <Info size={16} className="shrink-0 text-[#489cc2]" />
-                  <p className="text-[8px] font-bold text-green-900 leading-relaxed uppercase tracking-wider">
+                <div className="flex gap-2 bg-red-50 p-4 rounded-2xl border ">
+                  <Info size={16} className="shrink-0 text-[#ff0000]" />
+                  <p className="text-[10px]  text-red-500 leading-relaxed uppercase tracking-wider font-semibold font-sans">
                     Toll, Parking & State Permits are extra. Estimation based on
                     standard routes.
                   </p>
