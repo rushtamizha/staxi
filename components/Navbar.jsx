@@ -41,7 +41,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
+      className={`fixed top-0 w-full z-20 transition-all duration-500 ${
         scrolled ? "py-3" : "py-6"
       }`}
     >
