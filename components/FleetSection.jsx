@@ -8,7 +8,7 @@ const FLEET = [
   {
     name: "Sedan",
     models: "Wagon R , Swift, Dzire, Amaze",
-    price: "13",
+    price: "14",
     bata: "400",
     seats: "4",
     image: "/seeden.png", // Replace with your image path
