@@ -346,128 +346,123 @@ const BookingForm = () => {
 
       {/* RECEIPT MODAL */}
       <AnimatePresence>
-        {showReceipt && (
-          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 backdrop-blur-xl">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setShowReceipt(false)}
-              className="absolute inset-0 bg-black/90"
-            />
-            <motion.div
-              initial={{ scale: 0.9, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              className="relative bg-white w-full max-w-md rounded-[3rem] overflow-hidden shadow-2xl border-4 border-[#489cc2]"
-            >
-              <div className="bg-[#489cc2] p-8 text-black flex justify-between items-start">
-                <div>
-                  <div className="bg-black text-white px-2 py-1 rounded text-[8px] font-black uppercase mb-2 inline-block">
-                    STAXI Estimate
-                  </div>
-                </div>
-                <X
-                  className="cursor-pointer hover:rotate-90 transition-transform"
-                  onClick={() => setShowReceipt(false)}
-                />
+  {showReceipt && (
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-2 sm:p-4 backdrop-blur-md">
+      {/* Overlay */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setShowReceipt(false)}
+        className="absolute inset-0 bg-black/80"
+      />
+
+      {/* Modal Container */}
+      <motion.div
+        initial={{ scale: 0.95, y: 20 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.95, y: 20 }}
+        className="relative bg-white w-full max-w-sm rounded-[2rem] overflow-hidden shadow-2xl border-2 border-[#489cc2] flex flex-col max-h-[92vh]"
+      >
+        {/* Compact Header */}
+        <div className="bg-[#489cc2] px-5 py-3 text-black flex justify-between items-center shrink-0">
+          <div>
+            <div className="bg-black text-white px-1.5 py-0.5 rounded text-[7px] font-black uppercase mb-0.5 inline-block">
+              STAXI Estimate
+            </div>
+            <h4 className="text-lg font-black italic tracking-tighter leading-none">
+              BOOKING DETAILS
+            </h4>
+          </div>
+          <button 
+            onClick={() => setShowReceipt(false)}
+            className="p-1 hover:bg-black/10 rounded-full transition-colors"
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        {/* Scrollable Content Area */}
+        <div className="p-5 space-y-4 overflow-y-auto custom-scrollbar">
+          {/* Quick Info Grid */}
+          <div className="grid grid-cols-2 gap-2 bg-slate-50 p-3 rounded-2xl">
+            <div className="flex flex-col">
+              <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">
+                Duration
+              </span>
+              <span className="text-xs font-black text-black">{days} Day(s)</span>
+            </div>
+            <div className="flex flex-col text-right">
+              <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">
+                Total Dist.
+              </span>
+              <span className="text-xs font-black text-[#489cc2]">
+                {formData.tripType === "ROUND_TRIP" ? distance * 2 : distance} KM
+              </span>
+            </div>
+          </div>
+
+          {/* Fare Breakdown */}
+          <div className="space-y-2.5 px-1">
+            <div className="flex justify-between items-center text-[11px]">
+              <span className="font-bold uppercase text-slate-500 italic">
+                {formData.tripType === "ONE_WAY" && distance > 100 
+                  ? `Fare (${distance}km × ₹${config.extra})` 
+                  : `Base Fare (${minKmApplied}km)`}
+              </span>
+              <span className="font-black text-black">
+                ₹{formData.tripType === "ONE_WAY" 
+                    ? (distance <= 100 ? config.base : distance * config.extra)
+                    : (minKmApplied * config.extra)}
+              </span>
+            </div>
+
+            {extraKm > 0 && formData.tripType === "ROUND_TRIP" && (
+              <div className="flex justify-between items-center text-[11px]">
+                <span className="font-bold uppercase text-slate-500 italic">Extra Usage ({extraKm}km)</span>
+                <span className="font-black text-black">₹{extraFare}</span>
               </div>
+            )}
 
-              <div className="p-8 space-y-6">
-                <div className="grid grid-cols-2 gap-4 bg-slate-50 p-5 rounded-[2rem]">
-                  <div className="flex flex-col">
-                    <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">
-                      Duration
-                    </span>
-                    <span className="text-sm font-black text-black">
-                      {days} Day(s)
-                    </span>
-                  </div>
-                  <div className="flex flex-col text-right">
-                    <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">
-                      Total Distance
-                    </span>
-                    <span className="text-sm font-black text-[#489cc2]">
-                      {formData.tripType === "ROUND_TRIP"
-                        ? distance * 2
-                        : distance}{" "}
-                      KM
-                    </span>
-                  </div>
-                </div>
+            <div className="flex justify-between items-center text-[11px] border-b border-slate-100 pb-2">
+              <span className="font-bold uppercase text-slate-500 italic">Driver Bata</span>
+              <span className="font-black text-black">₹{totalBata}</span>
+            </div>
 
-                <div className="space-y-4 px-2">
-  {/* Dynamic Row for One Way vs Round Trip */}
-  <div className="flex justify-between items-center group">
-    <span className="text-[10px] font-black uppercase text-slate-400 group-hover:text-black transition-colors italic">
-      {formData.tripType === "ONE_WAY" && distance > 100 
-        ? `Distance Fare (${distance}km × ₹${config.extra})` 
-        : `Base Fare (${minKmApplied}km)`}
-    </span>
-    <span className="text-sm font-black text-black tracking-tight">
-      ₹{formData.tripType === "ONE_WAY" 
-          ? (distance <= 100 ? config.base : distance * config.extra)
-          : (minKmApplied * config.extra)
-      }
-    </span>
-  </div>
+            <div className="flex justify-between items-center pt-1">
+              <span className="text-lg font-black uppercase italic tracking-tighter text-black">Total</span>
+              <span className="text-2xl font-black text-[#489cc2] tracking-tighter">₹{totalAmount}</span>
+            </div>
+          </div>
 
-  {/* Extra Usage Row: Only show if it's a Round Trip with extra KM or One Way doesn't use it */}
-  {extraKm > 0 && formData.tripType === "ROUND_TRIP" && (
-    <div className="flex justify-between items-center group">
-      <span className="text-[10px] font-black uppercase text-slate-400 group-hover:text-black transition-colors italic">
-        Extra Usage ({extraKm}km)
-      </span>
-      <span className="text-sm font-black text-black tracking-tight">
-        ₹{extraFare}
-      </span>
+          {/* Info Alert */}
+          <div className="flex gap-2 bg-red-50 p-3 rounded-xl border border-red-100">
+            <Info size={14} className="shrink-0 text-red-500" />
+            <p className="text-[9px] text-red-600 leading-tight font-bold uppercase tracking-tight">
+              Toll, Parking & State Permits are extra.
+            </p>
+          </div>
+
+          {/* Action Buttons - Stacked & Compact */}
+          <div className="space-y-2 pt-1">
+            <button
+              onClick={sendWhatsApp}
+              className="w-full bg-[#489cc2] text-white py-3.5 rounded-xl font-black text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
+            >
+              <MessageCircle fill="white" size={18} /> WHATSAPP BOOKING
+            </button>
+            <a
+              href="tel:+918760212345"
+              className="w-full bg-[#48c256] text-white py-3.5 rounded-xl font-black text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
+            >
+              <Phone fill="white" size={18} /> CALL TO BOOK
+            </a>
+          </div>
+        </div>
+      </motion.div>
     </div>
   )}
-
-  <div className="flex justify-between items-center group border-b border-slate-100 pb-4">
-    <span className="text-[10px] font-black uppercase text-slate-400 group-hover:text-black transition-colors italic">
-      Driver Bata ({days} Day{days > 1 ? 's' : ''})
-    </span>
-    <span className="text-sm font-black text-black tracking-tight">
-      ₹{totalBata}
-    </span>
-  </div>
-
-  <div className="flex justify-between items-center pt-2">
-    <span className="text-2xl font-black uppercase italic tracking-tighter text-black">
-      Total Fare
-    </span>
-    <span className="text-4xl font-black text-[#489cc2] tracking-tighter">
-      ₹{totalAmount}
-    </span>
-  </div>
-</div>
-
-                <div className="flex gap-2 bg-red-50 p-4 rounded-2xl border ">
-                  <Info size={16} className="shrink-0 text-[#ff0000]" />
-                  <p className="text-[10px]  text-red-500 leading-relaxed uppercase tracking-wider font-semibold font-sans">
-                    Toll, Parking & State Permits are extra. Estimation based on
-                    standard routes.
-                  </p>
-                </div>
-
-                <button
-                  onClick={sendWhatsApp}
-                  className="w-full bg-[#489cc2] text-white py-5 rounded-[1.5rem] font-black text-lg flex items-center justify-center gap-3  transition-all active:scale-95"
-                >
-                  <MessageCircle fill="white" size={24} /> BOOK ON WHATSAPP
-                </button>
-
-                <button
-                  className="w-full bg-[#48c256] text-white py-5 rounded-[1.5rem] font-black text-lg flex items-center justify-center gap-3  transition-all active:scale-95"
-                >
-                  <Phone fill="white" size={24} /> <a href="tel:+918760212345">BOOK ON WHATSAPP</a>
-                </button>
-                
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+</AnimatePresence>
 
       <style jsx>{`
         .input-premium {
