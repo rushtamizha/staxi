@@ -169,7 +169,7 @@ const Footer = () => {
                 <MapPin className="text-[#489cc2] shrink-0" size={18} />
 
                 <span className="text-slate-400 text-sm font-medium">
-                  Al Jami Groups
+                  Al Jami Travels
                   <br />
                   124 MGR Bus Stand
                   <br />
