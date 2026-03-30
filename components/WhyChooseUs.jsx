@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
               className="text-4xl md:text-6xl font-black text-slate-900 leading-none uppercase tracking-tighter"
             >
               Why Choose <br />
-              <span className="text-[#489cc2]">STAXI Oneway Taxi</span>
+              <span className="text-[#489cc2]">S TAXI Oneway Taxi</span>
             </motion.h2>
           </div>
           <p className="text-slate-500 font-medium max-w-sm">
