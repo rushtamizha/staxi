@@ -30,7 +30,7 @@ const AboutSection = () => {
               
               {/* Branding Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-              <div className="absolute bottom-8 left-8 z-20">
+              <div className="absolute bottom-8 left-8 z-19">
                   <p className="text-[#135984] font-black text-5xl italic tracking-tighter leading-none">STAXI</p>
                   <p className="text-white font-bold uppercase tracking-widest text-xs mt-1">Premium Oneway Taxi</p>
               </div>
@@ -40,7 +40,7 @@ const AboutSection = () => {
             <motion.div 
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              className="absolute -bottom-6 -right-4 md:-right-6 bg-[#135984] p-8 rounded-[2.5rem] text-white  z-30"
+              className="absolute -bottom-6 -right-4 md:-right-6 bg-[#135984] p-8 rounded-[2.5rem] text-white  z-19"
             >
               <Trophy size={32} className="mb-4 text-white/80" />
               <p className="text-4xl font-black leading-none">5+</p>
