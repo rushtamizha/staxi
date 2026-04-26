@@ -44,22 +44,22 @@ export default function Navbar() {
       {/* Top Contact Bar */}
       <div
         className={`w-full bg-[#0a0a0a] border-b border-white/5 transition-all duration-500 overflow-hidden ${
-          scrolled ? "h-10 opacity-100" : "h-10 opacity-100"
+          scrolled ? "h-12 opacity-100" : "h-12 opacity-100"
         }`}
       >
         <div className="container mx-auto px-6 h-full flex items-center justify-between">
           <div className="flex items-center gap-6">
             <a
               href="tel:+918760212345"
-              className="flex items-center gap-2 text-[12px] font-black text-white hover:text-[#489cc2] transition-colors tracking-widest"
+              className="flex items-center gap-2 text-[13px] font-bold text-white hover:text-[#489cc2] transition-colors tracking-widest"
             >
               <Phone size={12} className="text-[#489cc2]" /> +91 87602 12345
             </a>
-            <div className=" flex items-center gap-2 text-[12px] font-black text-white tracking-widest">
+            <div className=" flex items-center gap-2 text-[13px] font-black text-white tracking-widest">
               <Clock size={12} className="text-[#489cc2]" /> 24/7 SERVICE
             </div>
           </div>
-          <div className="hidden md:block text-[12px] font-black text-white tracking-tighter uppercase ">
+          <div className="hidden md:block text-[13px] font-black text-white tracking-tighter uppercase ">
             Trusted One Way Drop Taxi
           </div>
         </div>
