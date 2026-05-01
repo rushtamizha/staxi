@@ -41,7 +41,7 @@ const HeroSection = () => {
               🚕 Intercity Specialists
             </span>
             <h1 className="text-5xl md:text-7xl font-black leading-[0.95] mb-6 tracking-tighter uppercase">
-              <span className="text-[#489cc2]">S TAXI</span>
+              <span className="text-[#489cc2]">S TAXI </span>
                Tamil Nadu’s Trusted <br />
               <span className="text-[#489cc2]">One Way</span> <br />
               Drop Taxi Service
